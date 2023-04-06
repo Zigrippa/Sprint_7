@@ -1,0 +1,150 @@
+Request method:	POST
+Request URI:	https://qa-scooter.praktikum-services.ru/api/v1/orders
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "firstName": "Николай",
+    "lastName": "Сергеев",
+    "address": "Острогоржская 7",
+    "metroStation": "Успенская",
+    "phone": "89415565359",
+    "rentTime": 10,
+    "deliveryDate": "2023-2-24",
+    "comment": "QroI6duR3O",
+    "color": [
+        "Black",
+        "Grey"
+    ]
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 16
+Content-Type: application/json; charset=utf-8
+Date: Thu, 06 Apr 2023 17:45:25 GMT
+ETag: W/"10-kuVhO1t53288TxDsE2rlGOJdjj0"
+Set-Cookie: _yasc=yt0PeZRRU7ErNr5WrQxboj+gCbdzwUGAovHRhiNAT6wZa/NuaeE2tLg9ckQ=; domain=.praktikum-services.ru; path=/; expires=Sun, 03-Apr-2033 17:45:25 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680803125810754-2117732941860820475
+
+{
+    "track": 136481
+}
+136481
+n5WnBYR6zP
+Request method:	POST
+Request URI:	https://qa-scooter.praktikum-services.ru/api/v1/courier
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "n5WnBYR6zP",
+    "password": "EFS6ylCL3v",
+    "firstName": "vb0IigddyH"
+}
+HTTP/1.1 201 Created
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Thu, 06 Apr 2023 17:45:28 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=w9s6Y8X+Sj/y+wOda4jxgYyEZ0pxPdwPmiGHbUVqHopYED2V0WLmtWBxBlk=; domain=.praktikum-services.ru; path=/; expires=Sun, 03-Apr-2033 17:45:28 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680803128029597-6982498228721964837
+
+{
+    "ok": true
+}
+Request method:	POST
+Request URI:	https://qa-scooter.praktikum-services.ru/api/v1/courier/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "login": "n5WnBYR6zP",
+    "password": "EFS6ylCL3v"
+}
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Length: 13
+Content-Type: application/json; charset=utf-8
+Date: Thu, 06 Apr 2023 17:45:28 GMT
+ETag: W/"d-B+HmBjG/q9GsxymNlfqjcwmD8Y0"
+Set-Cookie: _yasc=mEWEay5s4i+DAnkHpTcjXAWOrjLn8ayxO/ReoegRaQeB8DiUR/xLw6XjErys; domain=.praktikum-services.ru; path=/; expires=Sun, 03-Apr-2033 17:45:28 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680803128301336-11397439635929426746
+
+{
+    "id": 177404
+}
+Request method:	PUT
+Request URI:	https://qa-scooter.praktikum-services.ru/api/v1/orders/accept/136481?courierId=177404
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Thu, 06 Apr 2023 17:45:28 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=yiuDrM0z45fANQhuX1bliRXAkT+riRQxalPj1LNuJr+vRaj3R5Jhr9aZExoM; domain=.praktikum-services.ru; path=/; expires=Sun, 03-Apr-2033 17:45:28 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680803128623678-4450339894100263624
+
+{
+    "ok": true
+}
+Request method:	DELETE
+Request URI:	https://qa-scooter.praktikum-services.ru/api/v1/courier/177404
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Length: 11
+Content-Type: application/json; charset=utf-8
+Date: Thu, 06 Apr 2023 17:45:28 GMT
+ETag: W/"b-Ai2R8hgEarLmHKwesT1qcY913ys"
+Set-Cookie: _yasc=rm7Uj5Cm6NP0EqKNnktTfxs+8rWAPJw7Cys0ugR+xhPbGR+KdtZ+ugRtLhyT; domain=.praktikum-services.ru; path=/; expires=Sun, 03-Apr-2033 17:45:28 GMT; secure
+X-Powered-By: Express
+X-Request-Id: 1680803128897052-11948739557874994622
+
+{
+    "ok": true
+}
+
+Process finished with exit code 0
