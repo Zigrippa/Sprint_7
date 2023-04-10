@@ -36,8 +36,6 @@ public class GetOrderById {
 
         assertNotNull("Сервер не возвращает заказ",
                 response.extract().body().asString());
-
-
     }
 
     @Test
@@ -47,8 +45,6 @@ public class GetOrderById {
 
         assertEquals("Статус код неверный при попытке получения заказа по номеру без указания номера",
                 HttpStatus.SC_BAD_REQUEST, response.extract().statusCode());
-
-
     }
 
     @Test
@@ -58,8 +54,7 @@ public class GetOrderById {
 
         assertEquals("Статус код неверный при попытке получения заказа по номеру с указанием неверного номера",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
-
     }
+
 }
 

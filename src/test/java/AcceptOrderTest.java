@@ -60,8 +60,7 @@ public class AcceptOrderTest {
 
         assertEquals("Неверное боди присланное сервером при принятии курьером заказа",
                 "{\"ok\":true}", response.extract().body().asString());
-
-    } //Данный тест проходит 1 раз из 5, баг, приложен лог прошедшего теста в качестве пруфа /target/passedTest.txt
+    } //Данный тест проходит 1 раз из 5 - баг
 
     @Test
     @DisplayName("Проверка принятия курьером заказа без указания Id курьера")
@@ -70,7 +69,6 @@ public class AcceptOrderTest {
 
         assertEquals("Статус код неверный при принятии курьером заказа без указания Id курьера",
                 HttpStatus.SC_BAD_REQUEST, response.extract().statusCode());
-
     }
 
     @Test
@@ -81,7 +79,6 @@ public class AcceptOrderTest {
 
         assertEquals("Статус код неверный при принятии курьером заказа при указании неверного Id курьера",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -91,7 +88,6 @@ public class AcceptOrderTest {
 
         assertEquals("Статус код неверный при принятии курьером заказа без указания Id заказа",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -102,9 +98,7 @@ public class AcceptOrderTest {
 
         assertEquals("Статус код неверный при принятии курьером заказа при указании неверного Id заказа",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
-
 
 }
 

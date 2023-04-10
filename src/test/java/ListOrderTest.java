@@ -20,7 +20,6 @@ public class ListOrderTest {
                 HttpStatus.SC_OK, response.extract().statusCode());
         assertThat("Отсутствует лист заказов",
                 response.extract().path("orders"), notNullValue());
-
     }
 
 }

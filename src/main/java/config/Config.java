@@ -1,5 +1,9 @@
 package config;
 
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.specification.RequestSpecification;
+
 public class Config {
 
 
@@ -12,6 +16,15 @@ public class Config {
     public final static String ORDER_PATH = "/api/v1/orders";
     public final static String ACCEPT_ORDER_PATH = "/api/v1/orders/accept/";
     public final static String GET_ORDER_PATH = "/api/v1/orders/track";
+
+    public static RequestSpecification getSpec() {
+        return new RequestSpecBuilder()
+                .setBaseUri(BASE_URL)
+                .setContentType(ContentType.JSON)
+                .build()
+                .log()
+                .all();
+    }
 
 
 }

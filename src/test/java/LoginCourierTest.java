@@ -55,7 +55,6 @@ public class LoginCourierTest {
 
         assertEquals("Статус код неверный при попытке логина курьера с неверным логином",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -66,7 +65,6 @@ public class LoginCourierTest {
 
         assertEquals("Статус код неверный при попытке логина курьера с неверным паролем",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -78,7 +76,6 @@ public class LoginCourierTest {
 
         assertEquals("Статус код неверный попытке логина под несуществующим пользователем",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -86,10 +83,9 @@ public class LoginCourierTest {
     public void correctLoginReturnIdTest() {
         ValidatableResponse response = courierClient.login(credsFrom(courier));
 
-        assertNotNull("При успешном логине не возвращается id", response.extract().path("id"));
-
         courierId = response.extract().path("id");
 
+        assertNotNull("При успешном логине не возвращается id", response.extract().path("id"));
     }
 
 }

@@ -5,7 +5,7 @@ import java.util.GregorianCalendar;
 
 public class RandomDate {
 
-    String date;
+    private String date;
 
 
     public String generateRandomDate() {
@@ -19,11 +19,11 @@ public class RandomDate {
 
         return calendar.get(Calendar.YEAR) + "-" + (calendar.get(Calendar.MONTH) + 1) + "-"
                 + calendar.get(Calendar.DAY_OF_MONTH);
-
     }
 
 
     public static int randBetween(int start, int end) {
         return start + (int)Math.round(Math.random() * (end - start));
     }
+
 }

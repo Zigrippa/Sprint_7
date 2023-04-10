@@ -24,7 +24,7 @@ public class CreateOrderTest {
         this.order = order;
     }
 
-    @Parameterized.Parameters()
+    @Parameterized.Parameters(name = "Name, Surname, Scooter Color: {0}, {1}, {8}")
         public static Object[][] getTestData() {
             return new Object[][]{
                     {Order.getOrderWithColor(List.of("Black"))},
@@ -44,8 +44,6 @@ public class CreateOrderTest {
                 HttpStatus.SC_CREATED, response.extract().statusCode());
         assertThat("Отсутствует номер трека заказа",
                 response.extract().path("track"), notNullValue());
-
     }
-
 
 }

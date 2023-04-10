@@ -13,4 +13,5 @@ public class CourierCreds {
     public static CourierCreds credsFrom(Courier courier) {
         return new CourierCreds(courier.getLogin(), courier.getPassword());
     }
+
 }

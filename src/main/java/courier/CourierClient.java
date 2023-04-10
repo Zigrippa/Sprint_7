@@ -17,39 +17,41 @@ public class CourierClient {
     @Step("Создание Курьера")
     public ValidatableResponse create(Courier courier) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(getSpec())
                 .and()
                 .body(courier)
-                .when().log().all()
+                .when()
                 .post(COURIER_PATH)
-                .then().log().all();
+                .then();
     }
 
     @Step("Логин Курьера")
     public ValidatableResponse login(CourierCreds creds) {
         return given()
-                .header("Content-type", "application/json")
+                .spec(getSpec())
                 .and()
                 .body(creds)
-                .when().log().all()
+                .when()
                 .post(LOGIN_PATH)
-                .then().log().all();
+                .then();
     }
 
     @Step("Удаление Курьера")
     public ValidatableResponse delete(int courierId) {
         return given()
-                .when().log().all()
+                .spec(getSpec())
+                .when()
                 .delete(COURIER_ID_PATH + courierId)
-                .then().log().all();
+                .then();
     }
 
     @Step("Удаление Курьера без id")
     public ValidatableResponse delete() {
         return given()
-                .when().log().all()
+                .spec(getSpec())
+                .when()
                 .delete(COURIER_ID_PATH)
-                .then().log().all();
+                .then();
     }
 
 }

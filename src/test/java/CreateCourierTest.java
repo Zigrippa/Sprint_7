@@ -42,17 +42,18 @@ public class CreateCourierTest {
     public void createCourierTest() {
         ValidatableResponse response = courierClient.create(courier);
 
-        assertEquals("Статус код неверный при создании курьера",
-                HttpStatus.SC_CREATED, response.extract().statusCode());
-
         courierId = idExtraction(courier);
 
+        assertEquals("Статус код неверный при создании курьера",
+                HttpStatus.SC_CREATED, response.extract().statusCode());
     }
 
     @Test
     @DisplayName("Проверка создания курьера с уже существующим набором данных")
     public void createTwoEqualCourierTest() {
         ValidatableResponse response = courierClient.create(courier);
+
+        courierId = idExtraction(courier);
 
         assertEquals("Статус код неверный при создании курьера",
                 HttpStatus.SC_CREATED, response.extract().statusCode());
@@ -61,9 +62,6 @@ public class CreateCourierTest {
 
         assertEquals("Статус код неверный при попытке создать уже существующего курьера",
                 HttpStatus.SC_CONFLICT, response2.extract().statusCode());
-
-        courierId = idExtraction(courier);
-
     }
 
     @Test
@@ -74,7 +72,6 @@ public class CreateCourierTest {
 
         assertEquals("Статус код неверный при создании курьера без логина",
                 HttpStatus.SC_BAD_REQUEST, response.extract().statusCode());
-
     }
 
     @Test
@@ -93,10 +90,10 @@ public class CreateCourierTest {
         courier.setFirstName(null);
         ValidatableResponse response = courierClient.create(courier);
 
+        courierId = idExtraction(courier);
+
         assertEquals("Статус код неверный при создании курьера без имени",
                 HttpStatus.SC_CREATED, response.extract().statusCode());
-
-        courierId = idExtraction(courier);
     }
 
     @Test
@@ -104,10 +101,10 @@ public class CreateCourierTest {
     public void correctResponseWhenCreateCourierTest() {
         ValidatableResponse response = courierClient.create(courier);
 
+        courierId = idExtraction(courier);
+
         assertEquals("Неверное боди присланное сервером при создании курьера",
                 "{\"ok\":true}", response.extract().body().asString());
-
-        courierId = idExtraction(courier);
     }
 
 }

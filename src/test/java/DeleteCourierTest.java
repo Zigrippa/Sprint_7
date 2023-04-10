@@ -39,7 +39,6 @@ public class DeleteCourierTest {
 
         assertEquals("Статус код неверный при удалении курьера",
                 HttpStatus.SC_OK, response.extract().statusCode());
-
     }
 
     @Test
@@ -50,7 +49,6 @@ public class DeleteCourierTest {
 
         assertEquals("Статус код неверный при удаления курьера без отправки id",
                 HttpStatus.SC_BAD_REQUEST, response.extract().statusCode());
-
     } // Данный тест выявил баг(или ошибку в документации),
     // при отправке запроса на удаления курьера без id возращается неверный статус код
 
@@ -62,7 +60,6 @@ public class DeleteCourierTest {
 
         assertEquals("Статус код неверный при удалении курьера с несуществующим id",
                 HttpStatus.SC_NOT_FOUND, response.extract().statusCode());
-
     }
 
     @Test
@@ -72,7 +69,6 @@ public class DeleteCourierTest {
 
         assertEquals("Неверное боди присланное сервером при удалении курьера",
                 "{\"ok\":true}", response.extract().body().asString());
-
     }
 
 }

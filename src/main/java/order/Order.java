@@ -1,10 +1,6 @@
 package order;
 
-import org.apache.commons.lang3.RandomStringUtils;
-import utils.RandomDate;
-
 import java.util.List;
-import java.util.Random;
 
 public class Order {
 
